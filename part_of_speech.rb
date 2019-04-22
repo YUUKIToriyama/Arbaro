@@ -48,6 +48,9 @@ class String
 			else
 				"#{self} is a future tense of verb"
 			end
+		# 動詞の命令形は語尾が-uです
+		elsif self.end_with?("u")
+			"#{self} is an imperative form of verb"
 		else
 			"unknown word"
 		end
