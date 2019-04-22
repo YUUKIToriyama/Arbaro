@@ -19,6 +19,19 @@ class String
 			else
 				"#{self} is an adjective that modify plural nouns"
 			end
+		# 名詞及び形容詞の対格の判別
+		elsif self.end_with?("on") || self.end_with?("ojn") then
+			if self.end_with?("on")
+				"#{self} is a singular noun accusative"
+			else
+				"#{self} is a plural noun accusative"
+			end
+		elsif self.end_with?("an") || self.end_with?("ajn") then
+			if self.end_with?("an")
+				"#{self} is an adjective that modify a noun accusative"
+			else
+				"#{self} is an adjective that modify a plural noun accusative"
+			end				
 		# 副詞の判別
 		# 副詞のほとんどは語尾-eを持ちます
 		elsif self.end_with?("e") then
